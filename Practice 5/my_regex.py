@@ -3,7 +3,6 @@ import re
 # 1
 pattern = r"ab*"   # 'a' followed by zero or more 'b'
 text = "abbb"
-
 # re.fullmatch checks if the whole string matches the pattern
 if re.fullmatch(pattern, text):
     print("Match")
@@ -13,8 +12,7 @@ else:
 
 # 2
 pattern = r"ab{2,3}"   # 'a' followed by 2 or 3 'b'
-text = "abb"
-
+text = "ab"
 # {2,3} means the previous character must appear from 2 to 3 times
 if re.fullmatch(pattern, text):
     print("Match")
@@ -55,7 +53,7 @@ pattern = r"a.*b"
 # .*  -> any characters (0 or more)
 # b   -> ends with 'b'
 
-text = "axxxb"
+text = "axxxbс"
 
 if re.fullmatch(pattern, text):
     print("Match")
