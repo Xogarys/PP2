@@ -10,21 +10,33 @@
 
 # "b" - Binary - Binary mode (e.g. images)
 
+# Example 1: Writing data to a file using write mode ("w")
+
+# "w" mode creates a new file or overwrites the file if it already exists
 with open("sample.txt", "w") as f:
-    f.write("Hello\n")
-    f.write("This is practice 6\n")
-    
+    f.write("Hello\n")                 # Write the first line
+    f.write("This is practice 6\n")    # Write the second line
+
+
+# Example 2: Appending new content to an existing file using append mode ("a")
+
+# "a" mode adds new content to the end of the file without deleting existing data
 with open("demofile.txt", "a") as f:
-  f.write("Now the file has more content!")
+    f.write("Now the file has more content!")
 
-#open and read the file after the appending:
+
+# Open and read the file after appending
 with open("demofile.txt") as f:
-  print(f.read())
-  
-  
+    print(f.read())   # Print the file content
+
+
+# Example 3: Overwriting the file using write mode ("w")
+
+# This will delete the old content and replace it with new text
 with open("demofile.txt", "w") as f:
-  f.write("Woops! I have deleted the content!")
+    f.write("Woops! I have deleted the content!")
 
-#open and read the file after the overwriting:
+
+# Open and read the file after overwriting
 with open("demofile.txt") as f:
-  print(f.read())
+    print(f.read())   # Print the new content
